@@ -27,8 +27,4 @@ jobs:
         docker image build -t shadracho/gitops:hellov1.2 .
         docker push shadracho/gitops:hellov1.2
         - name: Build & Push Image
-  run: |
-    cd ./python
-    echo "${{ secrets.DOCKERPW }}" | docker login -u "${{ secrets.shadracho }}" --password-stdin
-    docker image build -t shadracho/gitops:hellov1.2 .
-    docker push shadracho/gitops:hellov1.2
+
